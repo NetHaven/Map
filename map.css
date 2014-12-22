@@ -1,0 +1,67 @@
+#menu-bar, #print, #help
+{
+	background-color: #0b1e73;
+}
+
+#menu-bar
+{
+	height: 24px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+#menu-bar #menu-bar-right 
+{
+	float: right;
+	width: 140px;
+}
+
+#menu-bar #menu-bar-right .button 
+{
+	float: left;
+	padding-left: 20px;
+	width: 40px;
+	padding: 6px 6px 6px 20px;
+}
+
+#print, #help 
+{
+	color: #ffffff;
+}
+
+#print 
+{
+	background-image: url('assets/img/print-hover.png');
+	background-repeat: no-repeat;
+	background-position: 2px 4px;
+}
+
+#user-content-wrapper 
+{
+	box-shadow: 1px 0px 3px 0 rgba(0, 0, 0, 0.5);
+	z-index: 100;
+	position: absolute;
+	left: 0;
+	top: 24px;
+	bottom: 0;
+	width: 350px;
+}
+
+#content-bar-wrapper 
+{
+	position: absolute;
+	top: 140px;
+	left: 0px;
+	bottom: 24px;
+	width: 100%;
+}
+
+.sidebar-title 
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #0b1e73;
+	margin: 15px 0 15px 20px;
+}
