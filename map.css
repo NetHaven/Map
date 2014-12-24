@@ -1,3 +1,11 @@
+body 
+{
+	font-family: "Open Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+	color: #363636;
+	font-size: 12px;
+	font-weight: 500;
+}
+
 #menu-bar, #print, #help
 {
 	background-color: #0b1e73;
@@ -33,6 +41,13 @@
 #print 
 {
 	background-image: url('assets/img/print-hover.png');
+	background-repeat: no-repeat;
+	background-position: 2px 4px;
+}
+
+#help 
+{
+	background-image: url('assets/img/help-hover.png');
 	background-repeat: no-repeat;
 	background-position: 2px 4px;
 }
