@@ -13,11 +13,36 @@
 ******************************************************************************/
 edu.hofstra.map.MapEngine = (function()
 { 														  /* Class MapEngine */
+	var Constructor,
+	
 	/* Fields */
-	var provider,
+	provider,
 	
 	/* Methods */
 	getProvider, setProvider;
+	
+	/**************************************************************************
+	* Module: Constructor MapEngine
+	*
+	* Created: 12/22/14
+	*
+	* Last Updated: 12/22/14
+	*
+	* Passed Parameters: None.
+	*
+	* Local Variables: None.
+	*
+	* Methods Called: None.
+	*
+	* Returned Value: None.
+	*
+	* Description: Initializes the MapEngine class.
+	**************************************************************************/
+	Constructor = function()
+	{ 												/* Constructor MapEngine */
+		// Set Default Provider
+		provider = edu.hofstra.map.MapProvider.GOOGLE;
+	}; 												/* Constructor MapEngine */
 	
 	/**************************************************************************
 	* Module: Method getProvider
@@ -63,9 +88,10 @@ edu.hofstra.map.MapEngine = (function()
 		provider = mapProvider;
 	}; 												   /* Method setProvider */
 	
+	Constructor();
+
 	return {
 		getProvider:getProvider,
 		setProvider:setProvider
 	};
-	
 }()); 													  /* Class MapEngine */
