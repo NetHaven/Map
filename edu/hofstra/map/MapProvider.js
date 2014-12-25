@@ -1,9 +1,11 @@
 /******************************************************************************
 * Module: Class MapProvider
 *
-* Created: 10/21/14
+* Package: edu.hofstra.map
 *
-* Last Updated: 10/21/14
+* Created: 12/22/14
+*
+* Last Updated: 12/22/14
 *
 * Fields: GOOGLE.
 *

@@ -1,13 +1,16 @@
 /******************************************************************************
 * Module: Class MapEngine
 *
+* Package: edu.hofstra.map
+*
 * Created: 12/22/14
 *
 * Last Updated: 12/22/14
 *
-* Fields: provider.
+* Fields: location, provider, zoomLevel.
 *
-* Methods: getProvider(), setProvider().
+* Methods: getLocation(), getProvider(), getZoomLevel(), render(), 
+* 		   setLocation(), setProvider(), setZoomLevel().
 *
 * Description: This is the primary map management class.
 ******************************************************************************/
@@ -16,10 +19,10 @@ edu.hofstra.map.MapEngine = (function()
 	var Constructor,
 	
 	/* Fields */
-	provider,
+	location, provider, zoomLevel
 	
 	/* Methods */
-	getProvider, setProvider;
+	getLocation, getProvider, getZoomLevel, render, setLocation, setProvider, setZoomLevel;
 	
 	/**************************************************************************
 	* Module: Constructor MapEngine
@@ -44,6 +47,11 @@ edu.hofstra.map.MapEngine = (function()
 		provider = edu.hofstra.map.MapProvider.GOOGLE;
 	}; 												/* Constructor MapEngine */
 	
+	getLocation = function()
+	{ 												   /* Method getLocation */
+		return location;		
+	}; 												   /* Method getLocation */
+	
 	/**************************************************************************
 	* Module: Method getProvider
 	*
@@ -66,6 +74,20 @@ edu.hofstra.map.MapEngine = (function()
 		return provider;
 	}; 												   /* Method getProvider */
 	
+	getZoomLevel = function()
+	{ 												  /* Method getZoomLevel */
+		return zoomLevel;
+	}; 												  /* Method getZoomLevel */
+
+	render = function(element)
+	{ 													    /* Method render */		
+	}; 														/* Method render */
+
+	setLocation = function(mapLocation)
+	{ 												   /* Method setLocation */
+		location = mapLocation;
+	}; 												   /* Method setLocation */
+
 	/**************************************************************************
 	* Module: Method setProvider
 	*
@@ -88,10 +110,20 @@ edu.hofstra.map.MapEngine = (function()
 		provider = mapProvider;
 	}; 												   /* Method setProvider */
 	
+	setZoomLevel = function(mapZoomLevel)
+	{ 												  /* Method setZoomLevel */
+		zoomLevel = mapZoomLevel;
+	}; 												  /* Method setZoomLevel */
+	
 	Constructor();
 
 	return {
+		getLocation:getLocation,
 		getProvider:getProvider,
-		setProvider:setProvider
+		getZoomLevel:getZoomLevel,
+		render:render,
+		setLocation:setLocation,
+		setProvider:setProvider,
+		setZoomLevel:setZoomLevel
 	};
 }()); 													  /* Class MapEngine */

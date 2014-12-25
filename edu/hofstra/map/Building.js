@@ -1,6 +1,8 @@
 /******************************************************************************
 * Module: Class Building
 *
+* Package: edu.hofstra.map
+*
 * Created: 12/20/14
 *
 * Last Updated: 12/21/14
