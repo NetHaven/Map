@@ -5,25 +5,28 @@
 *
 * Created: 12/22/14
 *
-* Last Updated: 12/22/14
+* Last Updated: 12/23/14
 *
-* Fields: None.
+* Fields: moduleList, modulesLoaded.
 *
-* Methods: main(), namespace().
+* Methods: main(), namespace(), success().
 *
 * Description: This is the main application class.
 ******************************************************************************/
 var Application = (function() 
 { 														/* Class Application */
+	/* Fields */
+	var moduleList, modulesLoaded, 
+
 	/* Methods */
-	var main, namespace;
+	main, namespace, success;
 	
 	/**************************************************************************
 	* Module: Method namespace
 	*
 	* Created: 12/22/14
 	*
-	* Last Updated: 12/22/14
+	* Last Updated: 12/23/14
 	*
 	* Passed Parameters: nsString.
 	*
@@ -41,23 +44,38 @@ var Application = (function()
 	
 		nsList = nsString.split(".");
 		parentElement = window;
-		for (i = 0; i < nsList.length; i++)
+		for (i = 0; i < nsList.length; i+=1)
 		{
 			parentElement[nsList[i]] = {};
 			parentElement = parentElement[nsList[i]];
 		}
 	}; 													 /* Method namespace */
 	
+	success = function()
+	{ 													   /* Method success */
+		var MapEngine;
+		
+		modulesLoaded += 1;
+		if (modulesLoaded === moduleList.length)
+		{
+			MapEngine = edu.hofstra.map.MapEngine;
+	
+			MapEngine.setLocation(new edu.hofstra.map.Coordinate(40.71786400000001, -73.59743700000004));
+			MapEngine.setZoomLevel(8);
+			MapEngine.render(document.getElementById("map"));			
+		}
+	}; 													   /* Method success */
+
 	/**************************************************************************
 	* Module: Method main
 	*
 	* Created: 12/22/14
 	*
-	* Last Updated: 12/22/14
+	* Last Updated: 12/23/14
 	*
 	* Passed Parameters: None.
 	*
-	* Local Variables: i, moduleList.
+	* Local Variables: i.
 	*
 	* Methods Called: namespace().
 	*
@@ -68,8 +86,9 @@ var Application = (function()
 	**************************************************************************/
 	main = function()
 	{ 														  /* Method main */
-		var i, moduleList;
-		
+		var i;
+				
+		modulesLoaded = 0;
 		moduleList = [
 			"edu.hofstra.map.Coordinate", 
 			"edu.hofstra.map.Building",
@@ -79,10 +98,10 @@ var Application = (function()
 		
 		namespace("edu.hofstra.map");
 		
-		for (i = 0; i < moduleList.length; i++)
+		for (i = 0; i < moduleList.length; i+=1)
 		{
-			jQuery.getScript(moduleList[i].replace(/\./g, "/") + ".js");
-		}
+			jQuery.getScript(moduleList[i].replace(/\./g, "/") + ".js", success);
+		}		
 	}; 														  /* Method main */
 	
 	return {

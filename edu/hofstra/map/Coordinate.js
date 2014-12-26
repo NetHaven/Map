@@ -5,7 +5,7 @@
 *
 * Created: 12/20/14
 *
-* Last Updated: 12/21/14
+* Last Updated: 12/22/14
 *
 * Fields: latitude, longitude.
 *
@@ -15,6 +15,8 @@
 ******************************************************************************/
 edu.hofstra.map.Coordinate = function(lat, long)
 { 														 /* Class Coordinate */
+	"use strict";
+
 	var Constructor,
 	
 	/* Properties */

@@ -15,6 +15,8 @@
 ******************************************************************************/
 edu.hofstra.map.MapProvider = (function()
 { 														/* Class MapProvider */
+	"use strict";
+
 	return {
 		GOOGLE: "Google"
 	};

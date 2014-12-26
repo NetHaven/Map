@@ -5,7 +5,7 @@
 *
 * Created: 12/20/14
 *
-* Last Updated: 12/21/14
+* Last Updated: 12/22/14
 *
 * Fields: location, name, outline.
 *
@@ -15,10 +15,12 @@
 ******************************************************************************/
 edu.hofstra.map.Building = function(params)
 { 														   /* Class Building */
+	"use strict";
+	
 	var Constructor,
 	
 	/* Properties */
-	location, name, outline
+	location, name, outline,
 
 	/* Methods */
 	getLocation, getName, getOutline;
