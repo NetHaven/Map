@@ -51,6 +51,24 @@ var Application = (function()
 		}
 	}; 													 /* Method namespace */
 	
+	/**************************************************************************
+	* Module: Method success
+	*
+	* Created: 12/23/14
+	*
+	* Last Updated: 12/23/14
+	*
+	* Passed Parameters: None.
+	*
+	* Local Variables: MapEngine.
+	*
+	* Methods Called: MapEngine.setLocation(), MapEngine.setZoomLevel(), 
+	* 				  MapEngine.render().
+	*
+	* Returned Value: None.
+	*
+	* Description: Loads the map after all code modules have been loaded. 
+	**************************************************************************/
 	success = function()
 	{ 													   /* Method success */
 		var MapEngine;
@@ -61,7 +79,7 @@ var Application = (function()
 			MapEngine = edu.hofstra.map.MapEngine;
 	
 			MapEngine.setLocation(new edu.hofstra.map.Coordinate(40.71786400000001, -73.59743700000004));
-			MapEngine.setZoomLevel(8);
+			MapEngine.setZoomLevel(16);
 			MapEngine.render(document.getElementById("map"));			
 		}
 	}; 													   /* Method success */
@@ -93,6 +111,7 @@ var Application = (function()
 			"edu.hofstra.map.Coordinate", 
 			"edu.hofstra.map.Building",
 			"edu.hofstra.map.MapProvider",
+			"edu.hofstra.map.Marker",
 			"edu.hofstra.map.MapEngine"
 		];
 		
