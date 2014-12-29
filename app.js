@@ -121,6 +121,26 @@ var Application = (function()
 		{
 			jQuery.getScript(moduleList[i].replace(/\./g, "/") + ".js", success);
 		}		
+	
+		var categoryList = [{name: "Academic & Administrative" },
+			{name: "The Arts" },
+			{name: "Athletics" },
+			{name: "Residences" },
+			{name: "Dining" },
+			{name: "Services" },
+			{name: "Points of Interest"},
+			{name: "Transportation"}, 
+			{name: "Parking"},
+			{name: "Pedestrian Crossing"},
+			{name: "Off-Campus Locations"},
+			{name: "Local Attractions"}];
+
+
+		var contentBar = document.getElementById("content-bar");
+		for (i = 0; i < categoryList.length; i++)
+		{
+			contentBar.innerHTML += "<div class='content-bar-wrapper' style='overflow:hidden'><div class='image-wrapper'></div><div class='text-wrapper'><span>" + categoryList[i].name + "</span></div></div>";
+		}
 	}; 														  /* Method main */
 	
 	return {
