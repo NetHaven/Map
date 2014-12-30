@@ -3,9 +3,9 @@
 *
 * Package: None.
 *
-* Created: 10/21/14
+* Created: 12/22/14
 *
-* Last Updated: 10/22/14
+* Last Updated: 12/23/14
 *
 * Fields: moduleList, modulesLoaded.
 *
@@ -24,9 +24,9 @@ var Application = (function()
 	/**************************************************************************
 	* Module: Method namespace
 	*
-	* Created: 10/21/14
+	* Created: 12/22/14
 	*
-	* Last Updated: 10/22/14
+	* Last Updated: 12/23/14
 	*
 	* Passed Parameters: nsString.
 	*
@@ -54,9 +54,9 @@ var Application = (function()
 	/**************************************************************************
 	* Module: Method success
 	*
-	* Created: 10/22/14
+	* Created: 12/23/14
 	*
-	* Last Updated: 10/22/14
+	* Last Updated: 12/23/14
 	*
 	* Passed Parameters: None.
 	*
@@ -87,9 +87,9 @@ var Application = (function()
 	/**************************************************************************
 	* Module: Method main
 	*
-	* Created: 10/21/14
+	* Created: 12/22/14
 	*
-	* Last Updated: 10/22/14
+	* Last Updated: 12/23/14
 	*
 	* Passed Parameters: None.
 	*
