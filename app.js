@@ -3,9 +3,9 @@
 *
 * Package: None.
 *
-* Created: 12/22/14
+* Created: 10/21/14
 *
-* Last Updated: 12/23/14
+* Last Updated: 10/22/14
 *
 * Fields: moduleList, modulesLoaded.
 *
@@ -24,9 +24,9 @@ var Application = (function()
 	/**************************************************************************
 	* Module: Method namespace
 	*
-	* Created: 12/22/14
+	* Created: 10/21/14
 	*
-	* Last Updated: 12/23/14
+	* Last Updated: 10/22/14
 	*
 	* Passed Parameters: nsString.
 	*
@@ -54,9 +54,9 @@ var Application = (function()
 	/**************************************************************************
 	* Module: Method success
 	*
-	* Created: 12/23/14
+	* Created: 10/22/14
 	*
-	* Last Updated: 12/23/14
+	* Last Updated: 10/22/14
 	*
 	* Passed Parameters: None.
 	*
@@ -87,9 +87,9 @@ var Application = (function()
 	/**************************************************************************
 	* Module: Method main
 	*
-	* Created: 12/22/14
+	* Created: 10/21/14
 	*
-	* Last Updated: 12/23/14
+	* Last Updated: 10/22/14
 	*
 	* Passed Parameters: None.
 	*
@@ -109,7 +109,8 @@ var Application = (function()
 		modulesLoaded = 0;
 		moduleList = [
 			"edu.hofstra.map.Coordinate", 
-			"edu.hofstra.map.Building",
+			"edu.hofstra.map.Location",
+			"edu.hofstra.map.LocationCategory",
 			"edu.hofstra.map.MapProvider",
 			"edu.hofstra.map.Marker",
 			"edu.hofstra.map.MapEngine"
@@ -139,7 +140,14 @@ var Application = (function()
 		var contentBar = document.getElementById("content-bar");
 		for (i = 0; i < categoryList.length; i++)
 		{
-			contentBar.innerHTML += "<div class='content-bar-wrapper' style='overflow:hidden'><div class='image-wrapper'></div><div class='text-wrapper'><span>" + categoryList[i].name + "</span></div></div>";
+			contentBar.innerHTML += "<div class='content-bar-title content-bar-title-root contentbar-title-hover'> \
+										<div class='content-bar-wrapper content-bar-wrapper-down' style='overflow:hidden'> \
+											<div class='image-wrapper'></div> \
+											<div class='text-wrapper'> \
+												<span>" + categoryList[i].name + "</span> \
+											</div> \
+										</div> \
+									</div>";
 		}
 	}; 														  /* Method main */
 	

@@ -90,3 +90,34 @@ body
 	bottom: 0px;
 	overflow: hidden;
 }
+
+.content-bar-title 
+{
+	height: 40px;
+	line-height: 30px;
+}
+
+.content-bar-title-hover 
+{
+	cursor: pointer;
+}
+
+.content-bar-wrapper 
+{
+	height: 30px;
+	line-height: 30px;
+	padding: 5px 20px;
+	position: relative;
+	overflow: hidden;
+}
+
+.content-bar-title.content-bar-title-root .content-bar-wrapper 
+{
+	color: #363636;
+}
+
+.content-bar-title .text-wrapper span 
+{
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
